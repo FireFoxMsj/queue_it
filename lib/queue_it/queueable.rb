@@ -44,7 +44,7 @@ module QueueIt
             redirect_to QueueIt::UrlBuilder.clean_url(request_url) and return
           end
         rescue QueueIt::MissingArgsGiven
-          queue_url = QueueIt::UrlBuilder.build_queue_url(customer_id, event_id)
+          queue_url = QueueIt::UrlBuilder.build_queue_url(customer_id, event_id, request_url)
           destroy_all_queue_it_sessions
           redirect_to queue_url and return
         rescue QueueIt::NotAuthorized
