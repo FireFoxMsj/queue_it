@@ -4,11 +4,11 @@ require 'uri'
 module QueueIt
   class UrlBuilder
     def self.build_queue_url(customer_id, event_id, target_url = nil)
-      "https://#{customer_id}.queue-it.net/?c=#{customer_id}&e=#{event_id}&t=#{URI.encode_www_form_component(target_url)}"
+      "https://_580d1f71a22d09f0d94b32fecaa006dc.queue.iranshao.com?c=#{customer_id}&e=#{event_id}&t=#{URI.encode_www_form_component(target_url)}"
     end
 
     def self.build_cancel_url(customer_id, event_id, queue_id = nil)
-      "https://#{customer_id}.queue-it.net/cancel.aspx?c=#{customer_id}&e=#{event_id}&q=#{queue_id}"
+      "https://_580d1f71a22d09f0d94b32fecaa006dc.queue.iranshao.com/cancel.aspx?c=#{customer_id}&e=#{event_id}&q=#{queue_id}"
     end
 
     # Removes all queue_it params from URL
